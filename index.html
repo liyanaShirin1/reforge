@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#174a7e">
+  <title>KTU | Student Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="brand" id="homeLink">
+      <span class="logo">K</span>
+      <span class="brand-text">
+        <strong>KTU</strong>
+        <small>STUDENT PORTAL</small>
+      </span>
+    </a>
+    <span class="header-label">ACADEMIC SERVICES</span>
+  </header>
+
+  <main>
+    <!-- LOGIN PAGE -->
+    <section id="loginPage" class="hero">
+        
+<div class="intro">
+  <span class="eyebrow">KTU STUDENT PORTAL</span>
+  <h1>Welcome to<br><span>your campus.</span></h1>
+  <p class="intro-description">
+    Sign in to access your academic dashboard.
+  </p>
+</div>
+        <h1>Learn. Grow.<br><span>Succeed.</span></h>
+        <p class="intro-description">
+          Your academic journey, simplified. Access results,
+          examination updates and student services in one place.
+        </p>
+        </div>
+      </div>
+
+      <div class="login-card">
+        <span class="login-label">STUDENT ACCESS</span>
+        <h2>Welcome back!</h2>
+        <p class="login-subtitle">Sign in to continue to your student portal.</p>
+
+        <form id="loginForm">
+          <label for="studentId">Student ID</label>
+          <input id="studentId" type="text"
+            placeholder="Enter your Student ID"
+            autocomplete="username" required>
+
+          <label for="password">Password</label>
+          <input id="password" type="password"
+            placeholder="Enter your password"
+            autocomplete="current-password" required>
+
+          <button class="primary-button" type="submit">
+            Sign in to portal <span>→</span>
+          </button>
+          <p id="loginMessage" class="status-message" aria-live="polite"></p>
+        </form>
+
+        <div class="login-footer">Independent KTU redesign concept</div>
+      </div>
+    </section>
+
+    <!-- STUDENT DASHBOARD -->
+    <section id="dashboardPage" class="page dashboard" hidden>
+      <div class="page-heading">
+        <div>
+          <span class="eyebrow">STUDENT OVERVIEW</span>
+          <h1>Welcome, <span id="studentName">Student</span>!</h1>
+          <p>Here's an overview of your academic information.</p>
+        </div>
+        <button class="secondary-button" id="logoutButton">Log out</button>
+      </div>
+
+      <div class="dashboard-grid">
+        <article class="dashboard-card">
+          <span class="card-icon">01</span>
+          <p>Current Semester</p>
+          <h2>Semester VI</h2>
+          <small>Sample information</small>
+        </article>
+        <article class="dashboard-card">
+          <span class="card-icon">02</span>
+          <p>Fees Paid</p>
+          <h2>₹40,000</h2>
+          <small>Sample amount</small>
+        </article>
+        <article class="dashboard-card">
+          <span class="card-icon">03</span>
+          <p>Pending Fees</p>
+          <h2>₹2,500</h2>
+          <small>Sample amount</small>
+        </article>
+        <article class="dashboard-card">
+          <span class="card-icon">04</span>
+          <p>Academic Calendar</p>
+          <h2>Important Dates</h2>
+          <small>View academic events</small>
+        </article>
+      </div>
+
+      <div class="quick-access">
+        <h2>Student Services</h2>
+        <p>Choose a section to continue.</p>
+        <div class="service-grid">
+          <button class="service-button" data-page="resultsPage">
+            <span class="service-symbol">↗</span>
+            <strong>Results</strong>
+            <small>View academic performance</small>
+          </button>
+          <button class="service-button" data-page="examsPage">
+            <span class="service-symbol">▤</span>
+            <strong>Examination Details</strong>
+            <small>View exam information</small>
+          </button>
+          <button class="service-button" data-page="feesPage">
+            <span class="service-symbol">₹</span>
+            <strong>Fee Details</strong>
+            <small>Review fee information</small>
+          </button>
+          <button class="service-button" data-page="feedbackPage">
+            <span class="service-symbol">✎</span>
+            <strong>Feedback</strong>
+            <small>Share suggestions</small>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS PAGE -->
+    <section id="resultsPage" class="page" hidden>
+      <button class="back-button" data-page="dashboardPage">← Dashboard</button>
+      <div class="page-heading">
+        <div>
+          <span class="eyebrow">ACADEMIC PERFORMANCE</span>
+          <h1>Results Overview</h1>
+          <p>Review your academic results and performance.</p>
+        </div>
+      </div>
+
+      <div class="filter-panel">
+        <div>
+          <label for="academicYear">Academic Year</label>
+          <select id="academicYear">
+            <option>2025–2026</option>
+            <option>2024–2025</option>
+            <option>2023–2024</option>
+          </select>
+        </div>
+        <div>
+          <label for="examType">Examination Type</label>
+          <select id="examType">
+            <option>Regular</option>
+            <option>Supplementary</option>
+            <option>Honours</option>
+            <option>Minor</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="dashboard-grid result-summary">
+        <article class="dashboard-card">
+          <p>CGPA</p>
+          <h2>—</h2>
+          <small>Awaiting real data</small>
+        </article>
+        <article class="dashboard-card">
+          <p>Credits Earned</p>
+          <h2>—</h2>
+          <small>Awaiting real data</small>
+        </article>
+        <article class="dashboard-card">
+          <p>Subjects Passed</p>
+          <h2>—</h2>
+          <small>Awaiting real data</small>
+        </article>
+        <article class="dashboard-card">
+          <p>Subjects Failed</p>
+          <h2>—</h2>
+          <small>Awaiting real data</small>
+        </article>
+      </div>
+
+      <div class="content-panel">
+        <h2>Detailed Mark List</h2>
+        <p class="empty-state">
+          Official marks are not connected to this prototype yet.
+        </p>
+      </div>
+    </section>
+
+    <!-- EXAMINATION PAGE -->
+    <section id="examsPage" class="page" hidden>
+      <button class="back-button" data-page="dashboardPage">← Dashboard</button>
+      <span class="eyebrow">EXAMINATION SERVICES</span>
+      <h1>Examination Details</h1>
+      <p class="page-description">
+        Keep track of examination information and schedules.
+      </p>
+
+      <div class="content-panel">
+        <h2>Examination Information</h2>
+        <div class="info-row">
+          <span>Upcoming examinations</span>
+          <strong>Check official notices</strong>
+        </div>
+        <div class="info-row">
+          <span>Exam timetable</span>
+          <strong>Not connected</strong>
+        </div>
+        <div class="info-row">
+          <span>Hall ticket</span>
+          <strong>Not connected</strong>
+        </div>
+        <p class="notice">
+          Please refer to official university announcements for confirmed dates.
+        </p>
+      </div>
+    </section>
+
+    <!-- FEES PAGE -->
+    <section id="feesPage" class="page" hidden>
+      <button class="back-button" data-page="dashboardPage">← Dashboard</button>
+      <span class="eyebrow">STUDENT ACCOUNTS</span>
+      <h1>Fee Details</h1>
+      <p class="page-description">Review your fee summary.</p>
+
+      <div class="dashboard-grid">
+        <article class="dashboard-card">
+          <p>Total Fees Paid</p>
+          <h2>₹40,000</h2>
+          <small>Illustrative sample</small>
+        </article>
+        <article class="dashboard-card">
+          <p>Pending Amount</p>
+          <h2>₹2,500</h2>
+          <small>Illustrative sample</small>
+        </article>
+      </div>
+
+      <div class="content-panel">
+        <h2>Payment Information</h2>
+        <p class="empty-state">
+          Actual fee statements and payment options are not connected.
+        </p>
+      </div>
+    </section>
+
+    <!-- FEEDBACK PAGE -->
+    <section id="feedbackPage" class="page" hidden>
+      <button class="back-button" data-page="dashboardPage">← Dashboard</button>
+      <span class="eyebrow">YOUR VOICE MATTERS</span>
+      <h1>Feedback & Questions</h1>
+      <p class="page-description">
+        Share suggestions to improve the student experience.
+      </p>
+
+      <div class="content-panel feedback-panel">
+        <form id="feedbackForm">
+          <label for="feedbackCategory">Category</label>
+          <select id="feedbackCategory" required>
+            <option value="">Select a category</option>
+            <option>Website usability</option>
+            <option>Examination services</option>
+            <option>Fee information</option>
+            <option>Other</option>
+          </select>
+
+          <label for="feedbackText">Your feedback</label>
+          <textarea id="feedbackText"
+            placeholder="Tell us what could be improved..."
+            rows="5" required></textarea>
+
+          <button class="primary-button" type="submit">Submit feedback →</button>
+          <p id="feedbackMessage" class="status-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>KTU STUDENT PORTAL</span>
+    <span>Independent student portal redesign concept</span>
+  </footer>
+
+</body>
+</html>
